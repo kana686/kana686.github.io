@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +9,81 @@
 </head>
 <body class="bg-white min-h-screen text-gray-800" style="background-image: url('images/git-pages-background.jpeg'); background-repeat: repeat-y; background-position: left top;">
 
-    <div class="ml-32 md:ml-40 p-8">
+    <div class="ml-32 md:ml-40 p-8 max-w-5xl">
         
-        <header class="pt-8 mb-12">
-            <h1 class="text-5xl md:text-6xl font-bold text-gray-700 tracking-wide">Kana's Portfolio</h1>
-            <p class="text-gray-600 mt-3 text-lg">学習したプロジェクトや成果物一覧</p>
+        <!-- 1. タイトル ＆ 簡単な説明 -->
+        <header class="pt-8 mb-8">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-700">Kana's Portfolio</h1>
+            <p class="text-gray-500 mt-3 text-lg">学習したスキルや制作物をまとめたポートフォリオサイトです。</p>
+            
+            <!-- ▼ 各項目へ遷移するリンク（ナビゲーションメニュー） -->
+            <nav class="flex flex-wrap gap-4 mt-6">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-medium transition">自己紹介</a>
+                <a href="#works" class="text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-medium transition">成果物</a>
+                <a href="#future" class="text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-medium transition">今後やりたいこと</a>
+            </nav>
         </header>
 
-        <main>
-            <div id="portfolio-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- カード -->
+        <!-- 2. 自己紹介 (id="about") -->
+        <section id="about" class="mb-16 pt-10">
+            <h2 class="text-3xl font-bold text-gray-700 mb-4">自己紹介</h2>
+            <p class="text-gray-600 leading-relaxed">
+                ここに簡単なプロフィールや自己紹介文が入ります。
+            </p>
+        </section>
+
+        <!-- 3. 成果物（カード形式） (id="works") -->
+        <section id="works" class="mb-16 pt-10">
+            <h2 class="text-3xl font-bold text-gray-700 mb-6">成果物</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- カード1 -->
+                <div class="border rounded-lg p-6 bg-white shadow-sm">
+                    <h3 class="text-xl font-bold">作品タイトル1</h3>
+                    <p class="text-gray-500 mt-2">作品の説明文がここに入ります。</p>
+                </div>
+                <!-- カード2 -->
+                <div class="border rounded-lg p-6 bg-white shadow-sm">
+                    <h3 class="text-xl font-bold">作品タイトル2</h3>
+                    <p class="text-gray-500 mt-2">作品の説明文がここに入ります。</p>
+                </div>
             </div>
-        </main>
+        </section>
+
+        <!-- 4. 今後やりたいこと (id="future") -->
+        <section id="future" class="mb-16 pt-10">
+            <h2 class="text-3xl font-bold text-gray-700 mb-4 flex items-center gap-2">
+                <span>🌱</span> これから挑戦したいこと
+            </h2>
+            
+            <p class="text-gray-600 leading-relaxed mb-6">
+                「シンプルで安全な開発」をより深めるため、以下の領域に挑戦していきたいです。
+            </p>
+
+            <!-- リスト部分 -->
+            <ul class="space-y-4 text-gray-600">
+                <li class="flex items-start gap-3">
+                    <span class="text-emerald-500 font-bold">•</span>
+                    <div>
+                        <strong class="text-gray-700">他言語の習得:</strong> 
+                        Minecraft（Java版）を活用してJavaの基本構造を学びつつ、Pythonにも挑戦して開発の幅を広げたいです。
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-emerald-500 font-bold">•</span>
+                    <div>
+                        <strong class="text-gray-700">モダンフロントエンド:</strong> 
+                        Laravelとの親和性も高い <span class="font-semibold text-gray-800">React</span> に触れ、より動的なユーザー体験（UI/UX）を作れるようになりたいです。
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-emerald-500 font-bold">•</span>
+                    <div>
+                        <strong class="text-gray-700">インフラ・セキュリティ:</strong> 
+                        「安全なコード」の裏付けとなる、ネットワークの基礎知識やウェブセキュリティの学習をさらに深めていきます。
+                    </div>
+                </li>
+            </ul>
+        </section>
 
     </div>
 
